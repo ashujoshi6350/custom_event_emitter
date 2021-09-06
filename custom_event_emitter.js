@@ -13,7 +13,7 @@ class EventEmitter {
 
   off(name, listenerToRemove) {
     if (!this.events[name]) {
-      throw new Error(`Can't remove a listener. Event "${name}" doesn't exits.`);
+      throw new Error(`Can't remove a listener. Event "${name}" doesn't exit.`);
     }
 
     const removeListener = (listener) => listener !== listenerToRemove;
@@ -23,7 +23,7 @@ class EventEmitter {
 
   emit(name, data) {
     if (!this.events[name]) {
-      throw new Error(`Can't emit an event. Event "${name}" doesn't exits.`);
+      throw new Error(`Can't emit an event. Event "${name}" doesn't exit.`);
     }
 
     this.events[name].forEach((fn) => {
